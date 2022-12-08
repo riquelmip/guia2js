@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let contador=0;
+        let numero=0;
+        let negativos=0;
+        let positivos=0;
+        let multiplos=0;
+        let par_positivo=0;
+        let par_negativo=0;
+        let impar=0;
+        let total=0;
+
+        while(contador<10){
+            numero = prompt('Ingrese un numero');
+            if(numero < 0){
+                negativos++;
+                numero % 2 == 0 ? par_negativo++ : impar++;
+            }else if(numero>0){
+                positivos++;
+                numero %2 == 0 ? par_positivo++ : impar++;
+            }else if(numero % 15 == 0){
+                multiplos++;
+            }
+            total = par_negativo + par_positivo;
+            contador++;
+        }
+        alert('La cantidad de numeros negativos es: ' +negativos+ ' La cantidad de numeros positivos son: '+positivos+' Multiplos de 15: '+multiplos+' La cantidad de numeros pares positivos es: '+total);
+        
+        </script>
+</head>
+<body>
+
+</body>
+</html>

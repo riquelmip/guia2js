@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcular(){
+            let p1 = parseInt(document.media.valor1.value);
+            let p2 = parseInt(document.media.valor2.value); 
+            let media = p1*0.30 + p2*0.70;
+            document.media.resultado.value = media;
+        }
+        
+    </script>
+</head>
+<body>
+    <form name="media">
+        Primer examen (30%): <input type="text" name="valor1"><br>
+        Segundo examen (70%): <input type="text" name="valor2"><br>
+        <input type="button" name="mediaa" value="Calcular" onclick="calcular()"><br>
+        Media: <input type="text" name="resultado">
+        </form>
+</body>
+</html>

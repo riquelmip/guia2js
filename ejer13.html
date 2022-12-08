@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function celciusaf() {
+            let res;
+            grados = parseFloat(document.grados.celcius.value);
+            res = (grados * (9/5)) + 32;
+
+            document.grados.resultado.value = res;
+        }
+        function aviso() {
+            let res;
+            grados = parseFloat(document.grados.fare.value);
+            if(grados>=14 && grados<32){
+                document.grados.resultadob.value = "Temperatura baja";
+            }else if(grados>=32 && grados<68){
+                document.grados.resultadob.value = "Temperatura adecuada";
+            }else if(grados>=68 && grados<96){
+                document.grados.resultadob.value = "Temperatura alta";
+            }else{
+                document.grados.resultadob.value = "Temperatura desconocida";
+            }
+
+            
+        }
+        function faren() {
+            let res;
+            grados = parseFloat(document.grados.fare2.value);
+            res = (grados-32) / (9/5);
+
+            document.grados.resultadoc.value = res;
+        }
+        
+        </script>
+</head>
+<body>
+    <form name="grados">
+        a) Grados celcuis: <input type="number" name="celcius"><br>
+        <input type="button" name="button1" value="Celcius a Fahrenheit" onclick="celciusaf()">
+        Resultado: <input type="text" name="resultado">
+        <br><br>
+        b) grados Fahrenheit: <input type="number" name="fare"><br>
+        <input type="button" name="button1" value="Fahrenheit" onclick="aviso()">
+        Resultado: <input type="text" name="resultadob">
+        <br><br>
+        c) grados Fahrenheit: <input type="number" name="fare2"><br>
+        <input type="button" name="button1" value="Fahrenheit" onclick="faren()">
+        Resultado: <input type="text" name="resultadoc">
+        
+    </form>
+</body>
+</html>

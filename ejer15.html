@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let contadormañana=0;
+        let contadormtarde=0;
+        let contadornoche=0;
+        let mañana=[];
+        let tarde=[];
+        let noche=[];
+        let prommañana=0;
+        let promtarde=0;
+        let promnoche=0;
+        let prommayor=0;
+
+        //mañana
+        for (let i = 0; i <5; i++) {
+            edad = prompt('Ingrese una edad del turno de mañana');
+            mañana.push(edad);
+        }
+        //tarde
+        for (let i = 0; i <6; i++) {
+            edad = prompt('Ingrese una edad del turno de tarde');
+            tarde.push(edad);
+        }
+        //mañana
+        for (let i = 0; i <11; i++) {
+            edad = prompt('Ingrese una edad del turno de noche');
+            noche.push(edad);
+        }
+
+        //calculando promedios
+        for (let i = 0; i < mañana.length; i++) {
+            prommañana = prommañana + parseInt(mañana[i]);
+            
+        }
+        prommañana = prommañana/mañana.length;
+
+        for (let i = 0; i < tarde.length; i++) {
+            promtarde = promtarde + parseInt(tarde[i]);
+            
+        }
+        promtarde = promtarde/tarde.length;
+
+        for (let i = 0; i < noche.length; i++) {
+            promnoche = promnoche + parseInt(noche[i]);
+            
+        }
+        promnoche = promnoche/noche.length;
+
+        if((prommañana > promtarde) && (prommañana>promnoche)){
+                
+                prommayor = 'Mañana';
+            }else if((promtarde > prommañana) && (promtarde>promnoche)){
+                prommayor = 'Tarde';
+            }else if((promnoche > prommañana) && (promnoche>promtarde)){
+                prommayor = 'Noche';
+            }
+        alert('El promedio de edades de la mañana es de: '+prommañana.toFixed(2) + '\n'+
+        'El promedio de edades de la tarde es de: '+promtarde.toFixed(2) + '\n'+
+        'El promedio de edades de la noche es de: '+promnoche.toFixed(2) + '\n'+
+        'El turno que tiene un mayor promedio es el de la: '+prommayor + '\n');
+        
+        </script>
+</head>
+<body>
+
+</body>
+</html>
